@@ -2,67 +2,31 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const linkStyles = {
-  display: "inline-block",
+  display: "block",
   width: "50px",
   padding: "12px",
   margin: "0 6px 6px",
-  background: "hotpink",
   textDecoration: "none",
-  color: "white",
-  
+  color: "blue",
 };
-
 
 function NavBar() {
   return (
-      <div>
-          <NavLink 
-            to="/"
-            exact
-            style={linkStyles}
-            activeStyle={{
-              background: "hotpink",
-            }}
-            >
-              Home
-            </NavLink>
-
-            <NavLink
-            to="/movies"
-            exact
-            style={linkStyles}
-            activeStyle={{
-              background: "hotpink",
-            }}
-            >
-              Movies
-            </NavLink>
-
-            <NavLink
-            to="/directors"
-            exact
-            style={linkStyles}
-            activeStyle={{
-              background: "hotpink",
-            }}
-            >
-              Directors 
-            </NavLink>
-
-            <NavLink
-            to="/actors"
-            exact
-            style={linkStyles}
-            activeStyle={{
-              background: "hotpink",
-            }}
-            >
-              Actors
-            </NavLink>
-            
-            
-      </div>
-      )
+    <div>
+      <NavLink className="navbar" exact to="/" style={linkStyles}>
+        Home
+      </NavLink>
+      <NavLink className="navbar" exact to="/movies" style={linkStyles}>
+        Movies
+      </NavLink>
+      <NavLink className="navbar" exact to="/directors" style={linkStyles}>
+        Directors
+      </NavLink>
+      <NavLink className="navbar" exact to="/actors" style={linkStyles}>
+        Actors
+      </NavLink>
+    </div>
+  );
 }
 
 export default NavBar;
